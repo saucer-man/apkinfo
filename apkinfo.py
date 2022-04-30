@@ -106,15 +106,16 @@ if platform.system().lower() == 'windows':
 def shell_detect(apk_path, result_path):
     try:
         zipfiles = zipfile.ZipFile(apk_path)
-        nameList = zipfiles.namelist()  # 得到压缩包里所有文件
+        namelist = zipfiles.namelist()  # 得到压缩包里所有文件
         zipfiles.extractall(path=os.path.join(
             result_path, "files"))  # 解压zip到result目录下
 
-        for fileName in nameList:
-            for shell in shellfeatures.keys():
-                if shell in fileName:
-                    shellType = shellfeatures[shell]
-                    return True, shellType
+        for filename in namelist:
+            for k,v in shellfeatures.items():
+                for shell in v:
+                    if shell in filename:
+                        shell_type = k
+                        return True, shell_type
     except:
         pass
     return False, "未加壳"

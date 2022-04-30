@@ -25,4 +25,4 @@ python3 apkinfo -f dir_for_app
 
 ## 备注
 
-参考 https://github.com/TheKingOfDuck/ApkAnalyser，但是原项目用起来报错了，所以自己重写了一个
+参考 https://github.com/TheKingOfDuck/ApkAnalyser   但是原项目用起来报错了，所以自己重写了一个
