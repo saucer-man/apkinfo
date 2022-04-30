@@ -12,7 +12,7 @@ shellfeatures = {
     "娜迦": [
         "libddog.so",
         "libchaosvmp.so",
-        "libddog.so libfdog.so",
+        "libddog.so",
         "libfdog.so"
     ],
     "娜迦企业版": [
@@ -33,9 +33,8 @@ shellfeatures = {
         "libexecmain.so"
     ],
     "360": [
-        "libjiagu.so; libjiagu.so",
         "libjiagu.so",
-        "libjiagu_art.so; libjiagu.so",
+        "libjiagu_art.so",
         "libjiagu_x86.so",
         "libprotectClass.so",
         "libjiagu_art.so"
@@ -54,7 +53,6 @@ shellfeatures = {
         "libtup.so",
         "lib/armeabi/mixz.dex",
         "libshell.so",
-        "libshell.so; mix.dex; lib/armeabi/mix.dex",
         "lib/armeabi/mix.dex",
         "mix.dex"
     ],
