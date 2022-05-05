@@ -11,7 +11,7 @@ import json
 
 class APKInfo():
     def __init__(self, apk_path):
-        self.apk_path = os.path.abspath(self.apk_path)
+        self.apk_path = os.path.abspath(apk_path)
         self.base_path = os.path.abspath(os.path.dirname(__file__))
         self.apk = None
         self.result_path = None
@@ -49,7 +49,6 @@ class APKInfo():
         return False
 
     def manifest(self):
-
         with open(os.path.join(self.result_path, "AndroidManifest.xml"), "w") as f:
             f.write(self.apk.get_manifest())
 
@@ -63,7 +62,7 @@ class APKInfo():
         except:
             pass
 
-    def finder(self, pattern, strings):
+    def finder(self, name, pattern, strings):
         matcher = re.compile(pattern)
         found = []
         for string in strings:
@@ -104,9 +103,9 @@ class APKInfo():
             raise(f"当前文件不存在")
 
         _, self.apkname = os.path.split(apk_path)
-        result_path = os.path.join(self.base_path, "result", self.apkname)
-        if not os.path.exists(result_path):
-            os.makedirs(result_path)
+        self.result_path = os.path.join(self.base_path, "result", self.apkname)
+        if not os.path.exists(self.result_path):
+            os.makedirs(self.result_path)
         else:
             print(f"{self.apkname}: 检测到文件已经分析过，将会覆盖")
         self.pattern_file = os.path.join(self.base_path, "config", "keys.json")
@@ -163,3 +162,5 @@ if __name__ == '__main__':
             apk.analyse()
         except Exception as e:
             print(f"{apk_path}出错: {e}")
+            import traceback
+            traceback.print_exc()
