@@ -42,17 +42,22 @@ class APKInfo():
     def dex2jar(apk_path, savePath):
         try:
             subprocess.run(
-                f"{dex2jar_path} --force {apk_path} --output {os.path.join(savePath, 'classed-dex2jar.jar')}", shell=True)
+                f"{dex2jar_path} --force {apk_path} --output {os.path.join(savePath, 'classed-dex2jar.jar')}",
+                shell=True)
             return True
         except:
             pass
         return False
 
     def manifest(self):
-        with open(os.path.join(self.result_path, "AndroidManifest.xml"), "w") as f:
+        with open(os.path.join(self.result_path, "AndroidManifest.xml"),
+                  "w",
+                  encoding='utf-8') as f:
             f.write(self.apk.get_manifest())
 
-        print(f"{self.apkname}基础信息：package: {self.apk.package_name} Version: {self.apk._version_name} MainActivity: {self.apk.get_manifest_main_activities()}")
+        print(
+            f"{self.apkname}基础信息：package: {self.apk.package_name} Version: {self.apk._version_name} MainActivity: {self.apk.get_manifest_main_activities()}"
+        )
 
     def signinfo(self):
         try:
@@ -74,7 +79,8 @@ class APKInfo():
     def save(self, name, found):
         if not found:
             return
-        with open(os.path.join(self.result_path, name), "a") as f:
+        with open(os.path.join(self.result_path, name), "a",
+                  encoding='utf-8') as f:
             f.write("\n".join(found))
 
     def detect_strings(self):
@@ -84,7 +90,9 @@ class APKInfo():
                 strings.add(string.decode(encoding="UTF-8"))
             except:
                 pass
-        with open(os.path.join(self.result_path, "strings.txt"), "w") as f:
+        with open(os.path.join(self.result_path, "strings.txt"),
+                  "w",
+                  encoding='utf-8') as f:
             for string in strings:
                 f.write(f"{string}\n")
 
@@ -100,7 +108,7 @@ class APKInfo():
     def check(self):
         print(f"下面开始分析:{self.apk_path}")
         if not os.path.exists(self.apk_path):
-            raise(f"当前文件不存在")
+            raise (f"当前文件不存在")
 
         _, self.apkname = os.path.split(apk_path)
         self.result_path = os.path.join(self.base_path, "result", self.apkname)
@@ -109,10 +117,10 @@ class APKInfo():
         else:
             print(f"{self.apkname}: 检测到文件已经分析过，将会覆盖")
         self.pattern_file = os.path.join(self.base_path, "config", "keys.json")
-        with open(self.pattern_file) as f:
+        with open(self.pattern_file, encoding='utf-8') as f:
             self.patterns = json.load(f)
         shell_path = os.path.join(self.base_path, "config", "shell.json")
-        with open(shell_path) as f:
+        with open(shell_path, encoding='utf-8') as f:
             self.shellfeatures = json.load(f)
 
     def analyse(self):
@@ -140,10 +148,8 @@ class APKInfo():
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='apk信息提取')
-    parser.add_argument('-a', '--apk',
-                        help='指定apk路径')
-    parser.add_argument('-d', '--dir',
-                        help='指定apk路径')
+    parser.add_argument('-a', '--apk', help='指定apk路径')
+    parser.add_argument('-d', '--dir', help='指定apk路径')
     args = parser.parse_args()
     apks = []
     if args.apk:
