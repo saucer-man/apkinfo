@@ -1,86 +1,156 @@
 {
-    "娜迦": [
-        "libddog.so",
-        "libchaosvmp.so",
-        "libddog.so",
-        "libfdog.so"
-    ],
-    "娜迦企业版": [
-        "libedog.so"
-    ],
-    "梆梆": [
-        "libsecexe.so",
-        "libSecShell.so",
-        "libsecmain.so"
-    ],
-    "梆梆企业版": [
-        "libDexHelper.so",
-        "libDexHelper-x86.so"
-    ],
-    "爱加密": [
-        "libexec.so",
-        "ijiami.dat",
-        "libexecmain.so"
-    ],
-    "360": [
-        "libjiagu.so",
+    "360":[
+        "1ibjgdtc.so",
+        "libjgdtc_a64.so",
+        "libjgdtc_x64.so",
+        "libjiagu_x64.so",
         "libjiagu_art.so",
+        "libjiagu_ls.so",
+        "libjiagu.so",
+        "libjgdtc_x86.so",
+        ".appkey",
+        "libjgdtc_art.so",
         "libjiagu_x86.so",
-        "libprotectClass.so",
-        "libjiagu_art.so"
+        "libjiagu_a64.so",
+        "libprotectClass.so"
     ],
-    "百度": [
-        "libbaiduprotect.so"
-    ],
-    "阿里聚安全": [
-        "libsgmain.so",
-        "libmobisec.so",
-        "aliprotect.dat",
-        "libsgsecuritybody.so"
-    ],
-    "腾讯": [
-        "libexec.so",
-        "libtup.so",
-        "lib/armeabi/mixz.dex",
-        "libshell.so",
-        "lib/armeabi/mix.dex",
-        "mix.dex"
-    ],
-    "腾讯御安全": [
-        "libtosprotection.armeabi-v7a.so",
-        "libtosprotection.armeabi.so",
-        "libtosprotection.x86.so"
-    ],
-    "通付盾": [
-        "libegis.so",
-        "libNSaferOnly.so"
-    ],
-    "网秦": [
-        "libnqshield.so"
-    ],
-    "网易易盾": [
-        "libnesec.so"
-    ],
-    "APKProtect": [
+    "APKProtect":[
         "libAPKProtect.so"
     ],
-    "几维安全": [
+    "UU安全":[
+        "libuusafe.so",
+        "libuusafeempty.so",
+        "libuusafe.jar.so"
+    ],
+    "apktoolplus":[
+        "jiagu_data.bin",
+        "libapktoolplus_jiagu.so",
+        "sign.bin"
+    ],
+    "中国移动加固":[
+        "libcmvmp.so",
+        "mogosec_classes",
+        "libmogosec_dex.so",
+        "mogosec_march",
+        "libmogosec_sodecrypt.so",
+        "mogosec_data",
+        "ibmogosecurity.so",
+        "mogosec_dexinfo"
+    ],
+    "几维安全":[
         "libkwslinker.so",
         "libkwscmm.so",
         "libkwscr.so"
     ],
-    "顶像科技": [
-        "libx3g.so"
+    "启明星辰":[
+        "libvenustech.so",
+        "libvenSec.so"
     ],
-
-    "爱加密企业版": [
+    "国信灵通":[
+        "libnqshield.so"
+    ],
+    "娜迦":[
+        "libchaosvmp.so",
+        "libddog.so",
+        "libfdog.so"
+    ],
+    "娜迦企业版":[
+        "libedog.so"
+    ],
+    "梆梆":[
+        "libsecexe.so",
+        "libsecmain.so",
+        "libSecShell.so"
+    ],
+    "梆梆企业版":[
+        "libDexHelper-x86.so",
+        "libDexHelper.so"
+    ],
+    "海云安加固":[
+        "libitsec.so"
+    ],
+    "爱加密":[
+        "libexec.so",
+        "ijiami.dat",
+        "ijiami.ajm",
+        "libexecmain.so"
+    ],
+    "爱加密企业版":[
         "ijiami.ajm"
     ],
-
-    "盛大": [
+    "珊瑚灵御":[
+        "libreincp_x86.so",
+        "libreincp.so"
+    ],
+    "瑞星加固":[
+        "librsprotect.so"
+    ],
+    "百度加固":[
+        "libbaiduprotect.so",
+        "libbaiduprotect_x86.so",
+        "libbaiduprotect_art.so",
+        "baiduprotect1.jar"
+    ],
+    "盛大加固":[
         "libapssec.so"
     ],
-    "瑞星": [
-        "librsprotect.so"
+    "网易易盾":[
+        "libnesec.so"
+    ],
+    "网秦加固":[
+        "libnqshield.so"
+    ],
+    "腾讯乐固（日版）":[
+        "libshel1x"
+    ],
+    "腾讯乐固（旧版）":[
+        "libshell.so",
+        "libshella",
+        "liblegudb.so",
+        "mix.dex",
+        "mixz.dex",
+        "libtup.so",
+        "libexec.so"
+    ],
+    "腾讯云移动应用安全（腾讯御安全）":[
+        "libtosprotection.armeabi-v7a.so",
+        "libtosprotection.armeabi.so",
+        "libBugly-yaq.so",
+        "000001111111",
+        "00000o11111.dex",
+        "000000011111.dex",
+        "tosversion",
+        "libshellx-super.2019.so",
+        "t86",
+        "tosprotection",
+        "libtosprotection.x86.so",
+        "libshell-super.2019.so",
+        "o0ooo000oo0o.dat",
+        "000000111111.dex",
+        "libzBugly-yaq.so"
+    ],
+    "腾讯御安全":[
+        "libtosprotection.armeabi-v7a.so",
+        "libtosprotection.armeabi.so",
+        "libtosprotection.x86.so"
+    ],
+    "通付盾":[
+        "libegis.so",
+        "libNSaferOnly.so"
+    ],
+    "阿里聚安全":[
+        "libzumadata.so",
+        "libdemolish.so",
+        "libpreverify1.so",
+        "libzuma.so",
+        "libdemolishdata.so",
+        "libsgsecuritybody.so",
+        "libfakejni.so",
+        "libsgmain.so",
+        "aliprotect.dat",
+        "libmobisec.so"
+    ],
+    "顶像科技":[
+        "libx3g.so"
     ]
 }
