@@ -6,8 +6,8 @@
 ```
 python3 -m pip install apkutils
 
-python3 apkinfo -a path/to/app
-python3 apkinfo -f dir/to/app
+python3 apkinfo.py -a path/to/app
+python3 apkinfo.py -f dir/to/app
 ```
 
 功能：
